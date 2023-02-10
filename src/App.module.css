@@ -1,0 +1,193 @@
+.wrapper {
+  margin: -1.7rem auto 2rem auto;
+  max-width: 48rem;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.inputGroup button,
+.inputGroup input {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: none;
+}
+
+.inputGroup button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--blue-600);
+  color: var(--white);
+  padding: 16px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.inputGroup button:hover {
+  background: var(--blue-500);
+  color: var(--gray-100);
+}
+
+.inputGroup input {
+  width: 100%;
+  background-color: var(--gray-500);
+  color: var(--white);
+  border: 1px solid #0d0d0d;
+  padding: 16px;
+}
+
+.inputGroup input:hover,
+.inputGroup input:focus {
+  outline: 1px solid var(--purple-600);
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 64px 0 24px 0;
+  font-size: 0.875rem;
+}
+
+.criadas,
+.concluidas {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.criadas span,
+.concluidas span {
+  background-color: var(--gray-500);
+  color: var(--white);
+  border-radius: 20px;
+  padding: 4px 8px;
+  font-weight: 400;
+}
+
+.concluidas p,
+.criadas p {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.criadas p {
+  color: var(--blue-500);
+  font-weight: 700;
+}
+
+.concluidas p {
+  color: var(--purple-500);
+  font-weight: 700;
+}
+
+.tarefas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.tarefa {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--gray-500);
+  padding: 1.5rem 0;
+  border-radius: 8px;
+}
+
+.tarefa input[type="checkbox"] {
+  position: relative;
+  float: left;
+  flex: none;
+  width: 18px;
+  height: 18px;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid var(--blue-500);
+  border-radius: 20px;
+  margin-left: 1rem;
+}
+
+.tarefa input[type="checkbox"]:hover {
+  background-color: var(--gray-400);
+  border-color: var(--blue-600);
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--purple-600);
+  transition: 0.5s;
+  border: 2px solid var(--purple-600);
+}
+
+input[type="checkbox"]:checked:hover {
+  border: none;
+  background-color: var(--purple-500);
+  border: 2px solid var(--purple-500);
+}
+
+.tarefas .tarefa input[type="checkbox"]:checked:before {
+  content: "✓";
+  font-size: 0.7rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  text-align: center;
+  color: var(--white);
+}
+
+.delete {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  height: 24px;
+  width: 24px;
+  border-radius: 0.2rem;
+  outline: none;
+  margin-right: 1rem;
+}
+
+.delete:hover,
+.svg:hover {
+  background-color: var(--gray-400);
+  color: var(--danger);
+}
+
+.tarefa p {
+  margin-right: auto;
+}
+
+.emptyTasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 64px;
+  gap: 16px;
+}
+
+.emptyTasksText {
+  font-size: 16px;
+  font-weight: 700;
+}
